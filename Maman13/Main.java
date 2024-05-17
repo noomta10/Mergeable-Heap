@@ -10,6 +10,11 @@ import static Maman13.HeapOperations.*;
 
 
 public class Main {
+    /**
+     * Get file name from user. exit if file is empty or not found
+     * @param fileName file name the user entered
+     * @return array with numbers from file
+     */
     public static int[] getInputFromFile(String fileName) {
         try {
             FileReader fileReader = new FileReader(fileName);
@@ -46,6 +51,12 @@ public class Main {
     }
 
 
+    /**
+     * Display menu to the user
+     * @param listType sorted or not sorted
+     * @param heapA first heap
+     * @param heapB second heap
+     */
     public static void displayMenu(String listType, Heap heapA, Heap heapB) {
         Scanner scanner = new Scanner(System.in);
         int operationNumber;
@@ -100,6 +111,10 @@ public class Main {
     }
 
 
+    /**
+     * Get list type from the user
+     * @return list type sorted or not sorted
+     */
     public static String getListType() {
         Scanner scanner = new Scanner(System.in);
         String listType;
@@ -122,6 +137,10 @@ public class Main {
     }
 
 
+
+    /**
+     * Create 2 empty heaps and display an interactive menu with operations to the user
+     */
     public static void main(String[] args) {
         int[] emptyArray = new int[0];
         Heap heapA = createHeap(emptyArray);

@@ -22,6 +22,10 @@ public class Heap {
     }
 
 
+    /**
+     * Add element to heap
+     * @param data data of the node to add
+     */
     public void add(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -36,6 +40,10 @@ public class Heap {
     }
 
 
+    /**
+     * Add element to its appropriate place in ordered heap
+     * @param data data of the node to add
+     */
     public void addOrdered(int data) {
         Node newNode = new Node(data);
         if (head == null || head.data >= data) {
@@ -52,6 +60,9 @@ public class Heap {
     }
     
 
+    /**
+     * Print heap
+     */
     public void display() {
         Node current = head;
         while (current != null) {
@@ -62,6 +73,10 @@ public class Heap {
     }
 
 
+    /**
+     * Delete node from the heap
+     * @param data data of the node to delete
+     */
     public void delete(int data) {
         if (head == null) {
             System.out.println("List is empty\n");
@@ -86,6 +101,9 @@ public class Heap {
     }
 
 
+     /**
+     * Delete first node from the heap
+     */
     public void deleteHead() {
         if (head == null) {
             System.out.println("List is empty\n");
@@ -96,6 +114,9 @@ public class Heap {
     }
 
 
+     /**
+     * Sort heap with priority queue implementation 
+     */
     public void heapSort() {
         if (head == null || head.next == null)
             return;

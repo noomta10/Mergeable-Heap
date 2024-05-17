@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 
 public class HeapOperations {
+    /**
+     * Create a heap from an array of numbers
+     * @param array is the array of numbers from the file the user provided
+     * @return the heap created 
+     */
     public static Heap createHeap(int[] array) {
         Heap heap = new Heap();
         
@@ -13,8 +18,12 @@ public class HeapOperations {
     
         return heap;
     }
+   
     
-    
+    /**
+     * Bubble sort an array of numbers
+     * @param array is the array of numbers from the file the user provided
+     */
     public static void bubbleSort(int[] array) {
         int n = array.length;
         for (int i = 0; i < n - 1; i++) {
@@ -29,7 +38,13 @@ public class HeapOperations {
         }
     }
     
-    
+
+    /**
+     * Create heap and display it
+     * @param heap is the heap to insert the numbers from the file
+     * @param listType sorted or not sorted
+     * @return the heap created 
+     */
     public static Heap makeHeap(Heap heap, String listType) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter file name for array input: ");
@@ -48,7 +63,12 @@ public class HeapOperations {
         return heap;
     }
     
-    
+  
+    /**
+     * insert an element to heap and display the new heap
+     * @param heap is the heap to insert the element 
+     * @param listType sorted or not sorted
+     */ 
     public static void insert(Heap heap, String listType) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number to insert: ");
@@ -64,7 +84,12 @@ public class HeapOperations {
         heap.display();
     }
     
-    
+
+    /**
+     * Find minimum element in the heap and delete it
+     * @param heap is the heap to delete the minimum from
+     * @param listType sorted or not sorted
+     */
     public static void extractMin(Heap heap, String listType) {
         Node current = heap.head; 
         if (current == null){
@@ -89,7 +114,12 @@ public class HeapOperations {
         heap.display();
     }
     
-    
+
+    /**
+     * Find minimum element in the heap and print it
+     * @param heap is the heap to insert the numbers from the file
+     * @param listType sorted or not sorted
+     */
     public static void minimum(Heap heap, String listType) {
         Node current = heap.head; 
         if (current == null){
@@ -110,7 +140,13 @@ public class HeapOperations {
         System.out.printf("Heap minimum: %d\n", min);
     }
     
-    
+
+    /**
+     * Union merge heap B to heap A 
+     * @param heapA first heap
+     * @param heapB second heap
+     * @param listType sorted or not sorted
+     */
     public static void union(Heap heapA, Heap heapB, String listType) {
         Node current = heapB.head; 
         
